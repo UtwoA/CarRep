@@ -5,6 +5,8 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRep", "CarRep\CarRep.csproj", "{5FAA9959-909B-4B85-B312-31F36CE9677A}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{522F6347-F2AD-4D8E-8300-9B3705805C57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{5FAA9959-909B-4B85-B312-31F36CE9677A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FAA9959-909B-4B85-B312-31F36CE9677A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FAA9959-909B-4B85-B312-31F36CE9677A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{522F6347-F2AD-4D8E-8300-9B3705805C57}.Debug|Any CPU.ActiveCfg = Debug
+		{522F6347-F2AD-4D8E-8300-9B3705805C57}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -28,28 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-
             this.cmbServices = new System.Windows.Forms.ComboBox();
             this.dtpAppointmentDate = new System.Windows.Forms.DateTimePicker();
             this.dgvAppointments = new System.Windows.Forms.DataGridView();
-            this.btnBookAppointment = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBookAppointment = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbServices
             // 
             this.cmbServices.FormattingEnabled = true;
-            this.cmbServices.Location = new System.Drawing.Point(130, 182);
+            this.cmbServices.Location = new System.Drawing.Point(51, 135);
             this.cmbServices.Name = "cmbServices";
-            this.cmbServices.Size = new System.Drawing.Size(121, 21);
+            this.cmbServices.Size = new System.Drawing.Size(215, 21);
             this.cmbServices.TabIndex = 0;
             // 
             // dtpAppointmentDate
             // 
-            this.dtpAppointmentDate.Location = new System.Drawing.Point(472, 157);
+            this.dtpAppointmentDate.Location = new System.Drawing.Point(51, 178);
             this.dtpAppointmentDate.Name = "dtpAppointmentDate";
-            this.dtpAppointmentDate.Size = new System.Drawing.Size(200, 20);
+            this.dtpAppointmentDate.Size = new System.Drawing.Size(215, 20);
             this.dtpAppointmentDate.TabIndex = 1;
             // 
             // dgvAppointments
@@ -57,15 +56,21 @@
             this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAppointments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
-            this.dgvAppointments.Location = new System.Drawing.Point(313, 199);
+            this.dgvAppointments.Location = new System.Drawing.Point(324, 101);
             this.dgvAppointments.Name = "dgvAppointments";
-            this.dgvAppointments.Size = new System.Drawing.Size(453, 122);
+            this.dgvAppointments.Size = new System.Drawing.Size(453, 267);
             this.dgvAppointments.TabIndex = 2;
             this.dgvAppointments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAppointments_CellContentClick);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            this.Column1.Visible = false;
+            // 
             // btnBookAppointment
             // 
-            this.btnBookAppointment.Location = new System.Drawing.Point(151, 261);
+            this.btnBookAppointment.Location = new System.Drawing.Point(112, 227);
             this.btnBookAppointment.Name = "btnBookAppointment";
             this.btnBookAppointment.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnBookAppointment.Size = new System.Drawing.Size(75, 23);
@@ -74,16 +79,11 @@
             this.btnBookAppointment.UseVisualStyleBackColor = true;
             this.btnBookAppointment.Click += new System.EventHandler(this.btnBookAppointment_Click);
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
-            this.Column1.Visible = false;
-            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::CarRep.Properties.Resources.fon1;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnBookAppointment);
             this.Controls.Add(this.dgvAppointments);

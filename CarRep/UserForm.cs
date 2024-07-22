@@ -117,7 +117,6 @@ namespace CarRep
                 }
             }
         }
-
         private void GenerateReceipt(int appointmentId, string filePath)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -143,16 +142,63 @@ namespace CarRep
                             DateTime appointmentDate = (DateTime)reader["AppointmentDate"];
                             string username = reader["Username"].ToString();
 
-                            Document document = new Document();
+                            Document document = new Document(PageSize.A4, 50, 50, 25, 25);
                             PdfWriter.GetInstance(document, new FileStream(filePath, FileMode.Create));
                             document.Open();
 
-                            document.Add(new Paragraph("Чек"));
-                            document.Add(new Paragraph($"Имя пользователя: {username}"));
-                            document.Add(new Paragraph($"Услуга: {serviceName}"));
-                            document.Add(new Paragraph($"Описание услуги: {serviceDescription}"));
-                            document.Add(new Paragraph($"Цена: {price}"));
-                            document.Add(new Paragraph($"Дата записи: {appointmentDate}"));
+                            // Заголовок
+                            string fontPath = @"C:\Users\works\source\repos\CarRep\CarRep\bin\Debug\ArialUnicodeMS.ttf"; // Укажите путь к файлу шрифта
+                            BaseFont baseFont = BaseFont.CreateFont(fontPath, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                            Font headerFont = new Font(baseFont, 18);
+                            Paragraph header = new Paragraph("Чек на услугу", headerFont);
+                            header.Alignment = Element.ALIGN_CENTER;
+                            document.Add(header);
+
+                            document.Add(new Paragraph("\n"));
+
+                            // Информация о пользователе
+                            Font infoFont = new Font(baseFont, 12);
+                            Paragraph userInfo = new Paragraph($"Имя пользователя: {username}", infoFont);
+                            document.Add(userInfo);
+
+                            // Таблица с данными услуги
+                            PdfPTable table = new PdfPTable(2);
+                            table.WidthPercentage = 100;
+                            table.SetWidths(new float[] { 1f, 2f });
+
+                            // Заголовки таблицы
+                            Font tableHeaderFont = new Font(baseFont, 12);
+                            PdfPCell cell = new PdfPCell(new Phrase("Параметр", tableHeaderFont))
+                            {
+                                BackgroundColor = BaseColor.LIGHT_GRAY
+                            };
+                            table.AddCell(cell);
+                            cell = new PdfPCell(new Phrase("Значение", tableHeaderFont))
+                            {
+                                BackgroundColor = BaseColor.LIGHT_GRAY
+                            };
+                            table.AddCell(cell);
+
+                            // Данные услуги
+                            Font tableCellFont = new Font(baseFont, 12);
+                            table.AddCell(new Phrase("Услуга:", tableCellFont));
+                            table.AddCell(new Phrase(serviceName, tableCellFont));
+                            table.AddCell(new Phrase("Описание услуги:", tableCellFont));
+                            table.AddCell(new Phrase(serviceDescription, tableCellFont));
+                            table.AddCell(new Phrase("Цена:", tableCellFont));
+                            table.AddCell(new Phrase($"{price:C}", tableCellFont));
+                            table.AddCell(new Phrase("Дата записи:", tableCellFont));
+                            table.AddCell(new Phrase(appointmentDate.ToString("dd MMMM yyyy"), tableCellFont));
+
+                            document.Add(table);
+
+                            document.Add(new Paragraph("\n"));
+
+                            // Подпись  
+                            Font footerFont = new Font(baseFont, 12);
+                            Paragraph footer = new Paragraph("Спасибо за использование наших услуг!", footerFont);
+                            footer.Alignment = Element.ALIGN_CENTER;
+                            document.Add(footer);
 
                             document.Close();
                         }
@@ -160,6 +206,9 @@ namespace CarRep
                 }
             }
         }
+
+
+
 
         private void dgvAppointments_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {

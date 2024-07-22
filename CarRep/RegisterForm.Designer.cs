@@ -37,23 +37,23 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(335, 163);
+            this.txtUsername.Location = new System.Drawing.Point(307, 163);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(100, 20);
+            this.txtUsername.Size = new System.Drawing.Size(155, 20);
             this.txtUsername.TabIndex = 0;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(335, 227);
+            this.txtPassword.Location = new System.Drawing.Point(307, 225);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtPassword.Size = new System.Drawing.Size(155, 20);
             this.txtPassword.TabIndex = 1;
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(307, 263);
+            this.btnRegister.Location = new System.Drawing.Point(324, 251);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(159, 23);
+            this.btnRegister.Size = new System.Drawing.Size(124, 23);
             this.btnRegister.TabIndex = 3;
             this.btnRegister.Text = "Зарегистрироваться";
             this.btnRegister.UseVisualStyleBackColor = true;
@@ -62,25 +62,28 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(368, 147);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(356, 140);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.Size = new System.Drawing.Size(55, 20);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Login";
+            this.label1.Text = "Логин";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(359, 211);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(356, 202);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(67, 20);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Password";
+            this.label2.Text = "Пароль";
             // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::CarRep.Properties.Resources.fon;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

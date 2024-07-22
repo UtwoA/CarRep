@@ -43,16 +43,16 @@
             this.dgvAdminAppointments.AllowUserToResizeRows = false;
             this.dgvAdminAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAdminAppointments.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvAdminAppointments.Location = new System.Drawing.Point(107, 95);
+            this.dgvAdminAppointments.Location = new System.Drawing.Point(40, 95);
             this.dgvAdminAppointments.Name = "dgvAdminAppointments";
             this.dgvAdminAppointments.Size = new System.Drawing.Size(531, 150);
             this.dgvAdminAppointments.TabIndex = 0;
             // 
             // btnApprove
             // 
-            this.btnApprove.Location = new System.Drawing.Point(107, 296);
+            this.btnApprove.Location = new System.Drawing.Point(40, 271);
             this.btnApprove.Name = "btnApprove";
-            this.btnApprove.Size = new System.Drawing.Size(75, 23);
+            this.btnApprove.Size = new System.Drawing.Size(93, 38);
             this.btnApprove.TabIndex = 1;
             this.btnApprove.Text = "Принять";
             this.btnApprove.UseVisualStyleBackColor = true;
@@ -60,9 +60,9 @@
             // 
             // btnReject
             // 
-            this.btnReject.Location = new System.Drawing.Point(240, 296);
+            this.btnReject.Location = new System.Drawing.Point(261, 271);
             this.btnReject.Name = "btnReject";
-            this.btnReject.Size = new System.Drawing.Size(75, 23);
+            this.btnReject.Size = new System.Drawing.Size(93, 38);
             this.btnReject.TabIndex = 2;
             this.btnReject.Text = "Отклонить";
             this.btnReject.UseVisualStyleBackColor = true;
@@ -70,9 +70,9 @@
             // 
             // btnComplete
             // 
-            this.btnComplete.Location = new System.Drawing.Point(364, 296);
+            this.btnComplete.Location = new System.Drawing.Point(478, 271);
             this.btnComplete.Name = "btnComplete";
-            this.btnComplete.Size = new System.Drawing.Size(75, 23);
+            this.btnComplete.Size = new System.Drawing.Size(93, 38);
             this.btnComplete.TabIndex = 3;
             this.btnComplete.Text = "Выполнено";
             this.btnComplete.UseVisualStyleBackColor = true;
@@ -82,7 +82,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::CarRep.Properties.Resources.fon1;
+            this.ClientSize = new System.Drawing.Size(620, 425);
             this.Controls.Add(this.btnComplete);
             this.Controls.Add(this.btnReject);
             this.Controls.Add(this.btnApprove);
